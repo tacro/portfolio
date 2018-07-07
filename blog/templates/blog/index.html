@@ -43,13 +43,13 @@
 
         <a href = ""><h3> {{post.title}} </h3></a>
 
-        {{ post.pub_date }}
+        {{ post.pub_date_pretty }}
 
         <br />
         <img src="{{post.image.url}}" class="img-fluid" alt="Responsive image" height="200" width="200"></img>
         <br />
 
-        <p> {{ post.body }} </p>
+        <p> {{ post.summary }} </p>
         {% endfor %}
 
       </div>
