@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Album example for Bootstrap</title>
+    <title>Tacro's blog'</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -19,15 +19,15 @@
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Tacro Chonmage</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Tacro Chonmage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#">Twitter</a>
-            <a class="nav-item nav-link" href="#">Resume</a>
-            <a class="nav-item nav-link active" href="#">Blog</a>
+            <a class="nav-item nav-link" href="https://twitter.com/tacro_" target="_blank">Twitter</a>
+            <a class="nav-item nav-link" href="{% static 'resume_tacro.pdf' %}">Resume</a>
+            <a class="nav-item nav-link active" href="{% url 'index' %}">Blog</a>
           </div>
         </div>
       </nav>
@@ -42,7 +42,7 @@
         <hr />
         {% for post in posts.all %}
 
-        <a href = ""><h3> {{post.title}} </h3></a>
+        <a href = "{% url 'detail' post.id %}"><h3> {{post.title}} </h3></a>
 
         {{ post.pub_date_pretty }}
 
