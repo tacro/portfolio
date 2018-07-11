@@ -27,12 +27,11 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
-            <a class="nav-item nav-link" href="{% static 'resume_tacro.pdf' %}">Resume</a>
             <a class="nav-item nav-link" href="{% url 'index' %}">Blog</a>
+            <a class="nav-item nav-link" href="mailto:tacro@g.ucla.edu" target=”_blank”>Contact</a>
             <a class="nav-item nav-link" href="https://twitter.com/tacro_" target=”_blank”><i class="fab fa-twitter-square"></i></a>
             <a class="nav-item nav-link" href="https://www.instagram.com/tacro_/" target=”_blank”><i class="fab fa-instagram"></i></a>
             <a class="nav-item nav-link" href="https://www.facebook.com/hashimototacro" target=”_blank”><i class="fab fa-facebook-square"></i></a>
-
           </div>
         </div>
       </nav>
@@ -40,16 +39,13 @@
 
     <main role="main">
 
-      <section class="jumbotron text-center bg-white">
+      <section class="jumbotron bg-white m-0 pb-0">
         <div class="container">
-          <h2 class="jumbotron-heading">Works</h2>
-          <p class="lead text-muted">
-            My name is Tacro Hashimoto who loves coding web service with python Django!
+          <h3 class="jumbotron-heading display-5">Works</h3>
+          <p class="lead text-muted m-0">
+            Here are my works. Expected to increase its number more and more</br>
+            過去につくったものたちです。これからどんどん増やしていきます。
           </p>
-          <p>
-            <a href="mailto:tacro@g.ucla.edu" class="btn btn-primary">Contact me!</a>
-          </p>
-          <img src="{% static 'avatar_by_uno.jpeg' %}" height="200"/>
         </div>
       </section>
 

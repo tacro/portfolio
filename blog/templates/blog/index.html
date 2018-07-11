@@ -9,8 +9,9 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Tacro's blog'</title>
+    <title>Tacro Hashimoto</title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
@@ -19,15 +20,18 @@
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'home' %}">Tacro Chonmage</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Tacro Hashimoto</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="https://twitter.com/tacro_" target="_blank">Twitter</a>
-            <a class="nav-item nav-link" href="{% static 'resume_tacro.pdf' %}">Resume</a>
-            <a class="nav-item nav-link active" href="{% url 'index' %}">Blog</a>
+            <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-item nav-link" href="{% url 'index' %}">Blog</a>
+            <a class="nav-item nav-link" href="mailto:tacro@g.ucla.edu" target=”_blank”>Contact</a>
+            <a class="nav-item nav-link" href="https://twitter.com/tacro_" target=”_blank”><i class="fab fa-twitter-square"></i></a>
+            <a class="nav-item nav-link" href="https://www.instagram.com/tacro_/" target=”_blank”><i class="fab fa-instagram"></i></a>
+            <a class="nav-item nav-link" href="https://www.facebook.com/hashimototacro" target=”_blank”><i class="fab fa-facebook-square"></i></a>
           </div>
         </div>
       </nav>

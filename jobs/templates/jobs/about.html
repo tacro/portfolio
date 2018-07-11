@@ -27,7 +27,6 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
-            <a class="nav-item nav-link" href="{% static 'resume_tacro.pdf' %}">Resume</a>
             <a class="nav-item nav-link" href="{% url 'index' %}">Blog</a>
             <a class="nav-item nav-link" href="mailto:tacro@g.ucla.edu" target=”_blank”>Contact</a>
             <a class="nav-item nav-link" href="https://twitter.com/tacro_" target=”_blank”><i class="fab fa-twitter-square"></i></a>
@@ -40,7 +39,7 @@
 
     <main role="main">
       <section class="jumbotron bg-white">
-          <h3 class="jumbotron-heading display-5">About</h3>
+          <h3 class="jumbotron-heading display-5 mb-3">About</h3>
           <div class="container">
             <img src="{% static 'avatar_by_uno.jpeg' %}" height="100" style="float:left;" class="pr-3"/>
             <div class="lead">Tacro Hashimoto<br>
@@ -83,25 +82,6 @@
           </div>
         </div>
       </section>
-
-      <div class="album py-5 bg-white">
-        <div class="container">
-          <div class="row">
-
-            {% for job in jobs.all %}
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-image-top" src="{{ job.image.url }}" alt="image should be here...">
-                <div class="card-body">
-                  <p class="card-text">{{ job.summary }}</p>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-
-          </div>
-        </div>
-      </div>
 
     </main>
 
