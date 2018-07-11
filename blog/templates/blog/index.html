@@ -39,26 +39,23 @@
 
     <main role="main">
       <div class="container">
-        <h1 class="text-center pt-3">Welocome to Tacro's blog</h1>
-        <br />
-        <br />
-        <h2>Latest post</h2>
-        <hr />
+        <h3 class="pt-3">Blog</h3>
         {% for post in posts.all %}
-
-        <a href = "{% url 'detail' post.id %}"><h3> {{post.title}} </h3></a>
-
-        {{ post.pub_date_pretty }}
-
-        <br />
-        <img src="{{post.image.url}}" class="img-fluid" alt="Responsive image" height="200" width="200"></img>
-        <br />
-
-        <p> {{ post.summary }} </p>
-        {% endfor %}
-
+        <div class=row>
+          <div class="jp col-md-6">
+            <table class=table><tbody>
+              <tr><td class=date>
+                <img src="{{post.image.url}}" class="img-fluid" alt="Responsive image" height="120" width="120" style="float:left;"></img>
+              </td><td class=jp>
+                <a href = "{% url 'detail' post.id %}"><h4 class="text-dark"> {{post.title}} </h4></a>
+                {{ post.pub_date_pretty }}
+                <p> {{ post.summary }} </p>
+              </td></tr>
+              </tbody></table>
+          </div>
+        </div>
       </div>
-
+        {% endfor %}
     </main>
 
     <footer class="text-muted">
