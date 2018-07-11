@@ -1,1 +1,121 @@
-this is about tacro's bio
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Tacro Hashimoto</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'home' %}">Tacro Hashimoto</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-item nav-link" href="{% static 'resume_tacro.pdf' %}">Resume</a>
+            <a class="nav-item nav-link" href="{% url 'index' %}">Blog</a>
+            <a class="nav-item nav-link" href="mailto:tacro@g.ucla.edu" target=”_blank”>Contact</a>
+            <a class="nav-item nav-link" href="https://twitter.com/tacro_" target=”_blank”><i class="fab fa-twitter-square"></i></a>
+            <a class="nav-item nav-link" href="https://www.instagram.com/tacro_/" target=”_blank”><i class="fab fa-instagram"></i></a>
+            <a class="nav-item nav-link" href="https://www.facebook.com/hashimototacro" target=”_blank”><i class="fab fa-facebook-square"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+      <section class="jumbotron bg-white">
+          <h3 class="jumbotron-heading display-5">About</h3>
+          <div class="container">
+            <img src="{% static 'avatar_by_uno.jpeg' %}" height="100" style="float:left;" class="pr-3"/>
+            <div class="lead">Tacro Hashimoto<br>
+            橋本 琢朗<br>
+            <small>Student/Enginner(wannabe)</small>
+          </div>
+          <br>
+        <div class="container">
+          <p>
+            誰かをドキドキワクワクさせられる何かを、仲間たちと一緒につくって生きたいです。アイデアを形にするだけの表現力を身につけるために、エンジニアを目指しています。
+          </p>
+          <p>
+            I want to create something that makes people hype and fun with my mates. Now I aim to become an enginner so that I can acquire an enough skill to realize my ideas.
+          </p>
+          <p>
+          </p>
+          <h5>経歴</h5>
+          <div class=row>
+            <div class="jp col-md-6">
+              <table class=table><tbody>
+                <tr><td class=date>1996.01.16</td><td class=jp>誕生</td></tr>
+                <tr><td class=date>2014.4</td><td class=jp>大阪大学人間科学部入学<br></td></tr>
+                <tr><td class=date>2016</td><td class=jp>リクルートHD, コロプラ, P&G, 村田製作所などのインターンシップに参加<br></td></tr>
+                <tr><td class=date>2017.1</td><td class=jp>(株)サイバーエージェントにてインターンシップ<br><span>広告事業本部クリエイティブ局でプランナーとして従事し、ナショナルクライアントのブランディングキャンペーンなどを担当</span></td></tr>
+                <tr><td class=date>2017.9</td><td class=jp>UCLAへ交換留学<br><span>プログラミングを中心に学ぶ</span></td></tr>
+                </tbody></table>
+            </div>
+          </div>
+          <h5>History</h5>
+          <div class=row>
+            <div class="jp col-md-6">
+              <table class=table><tbody>
+                <tr><td class=date>1996.1.16</td><td class=jp>Born</td></tr>
+                <tr><td class=date>2014.4</td><td class=jp>Enrolled into Osaka Univ.<br></td></tr>
+                <tr><td class=date>2016</td><td class=jp>Joined short-term internship at Recruit HD, P&G Japan, Colopl., Murata Manufacturing Co.<br></td></tr>
+                <tr><td class=date>2017.1</td><td class=jp>Internship at CyberAgent<br><span>Worked as a planner at Creative div of CyberAgent AdAgency, engaged in brand campaigns of national clients</span></td></tr>
+                <tr><td class=date>2017.9</td><td class=jp>Studied at UCLA as an exchange student<br><span>Learned programming</span></td></tr>
+                </tbody></table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-white">
+        <div class="container">
+          <div class="row">
+
+            {% for job in jobs.all %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-image-top" src="{{ job.image.url }}" alt="image should be here...">
+                <div class="card-body">
+                  <p class="card-text">{{ job.summary }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container text-center">
+        <p>&copy Tacro Hashimoto {% now "Y" %}</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
