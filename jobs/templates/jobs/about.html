@@ -28,7 +28,7 @@
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
             <a class="nav-item nav-link" href="{% url 'index' %}">Blog</a>
-            <a class="nav-item nav-link" href="mailto:tacro@g.ucla.edu" target=”_blank”>Contact</a>
+            <a class="nav-item nav-link" href="mailto:tacro@g.ucla.edu">Contact</a>
             <a class="nav-item nav-link" href="https://twitter.com/tacro_" target=”_blank”><i class="fab fa-twitter-square"></i></a>
             <a class="nav-item nav-link" href="https://www.instagram.com/tacro_/" target=”_blank”><i class="fab fa-instagram"></i></a>
             <a class="nav-item nav-link" href="https://www.facebook.com/hashimototacro" target=”_blank”><i class="fab fa-facebook-square"></i></a>
@@ -38,9 +38,9 @@
     </header>
 
     <main role="main">
-      <section class="jumbotron bg-white">
-          <h3 class="jumbotron-heading display-5 mb-3">About</h3>
+      <section class="jumbotron bg-white pt-3">
           <div class="container">
+            <h3 class="jumbotron-heading display-5 mb-3">About</h3>
             <img src="{% static 'avatar_by_uno.jpeg' %}" height="100" style="float:left;" class="pr-3"/>
             <div class="lead">Tacro Hashimoto<br>
             橋本 琢朗<br>
@@ -52,11 +52,16 @@
             誰かをドキドキワクワクさせられる何かを、仲間たちと一緒につくって生きたいです。アイデアを形にするだけの表現力を身につけるために、エンジニアを目指しています。
           </p>
           <p>
-            I want to create something that makes people hype and fun with my mates. Now I aim to become an enginner so that I can acquire an enough skill to realize my ideas.
+            I want to create something that makes people hyped and fun with my mates. Now I aim to become an enginner so that I can acquire an enough skill to realize my ideas.
           </p>
           <p>
           </p>
-          <h5>経歴</h5>
+          <h5 class="pb-2">Skills</h5>
+          <p>C++, openFrameworks</p>
+          <p>Ruby, Rails 5</p>
+          <p>Python3, django</p>
+
+          <h5 class="pb-2">経歴</h5>
           <div class=row>
             <div class="jp col-md-6">
               <table class=table><tbody>
@@ -68,7 +73,7 @@
                 </tbody></table>
             </div>
           </div>
-          <h5>History</h5>
+          <h5 class="pb-2">History</h5>
           <div class=row>
             <div class="jp col-md-6">
               <table class=table><tbody>
@@ -82,7 +87,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="text-muted">
